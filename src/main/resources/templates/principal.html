@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Kings - Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/c54effc087.css" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Mulish&family=Questrial&family=Raleway&display=swap" rel="stylesheet"></head>
+</head>
+<body>
+<style>
+            /* nuevo -- */
+            body{
+                font-size: 17px;
+                font-family: 'Mulish', sans-serif;;
+            }
+            /* nuevo -- */
+
+            .cajamostrar{
+                padding-top: 30px;
+            }
+
+            .titulopagina{
+                font-size: 42px;
+                color: #36a367;
+                font-weight: 800;
+            }
+
+            .custom-navbar{
+            background-color: rgb(66, 136, 77);
+            }
+
+            .navbar-nav .nav-link{
+            color: rgb(255, 255, 255);
+            margin: 0px 5px;
+            font-size: 1.2rem;
+            }
+
+            #btnhabilitar{
+                background-color: #2f6081;;
+            }
+
+            #btnhabilitar:hover{
+                background-color: #264c66;
+                transition: 0.2s;
+            }
+
+            .navbar-nav .nav-link:hover{
+                color: rgb(121, 238, 150);
+            }
+        </style>
+
+<nav th:insert="template.html :: nav"> </nav>
+<div class="container">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title></title>
+        <!-- Favicon-->
+
+    </head>
+    <body class="d-flex flex-column h-100" style="background: #ffffff">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+
+        <!-- Header-->
+        <header class="bg-with">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <div th:if=${param.logeoexitoso}>
+                                <div class="alert alert-success" role="alert" style="margin: 15px 0px">
+                                    <b>¡Logeado correctamente!</b>
+                                </div>
+                            </div>
+                            <!--<h1 class="display-5 fw-bolder text-dark mb-2">Bienvenidos a Memory Kings</h1>-->
+                            <h1 class="display-5 fw-bolder text-dark mb-2" style="font-size: 32px">Bienvenido, <span th:text="${name}"></span> (<span th:text="${role}"></span>)</h1>
+                            <br>
+                            <p class="lead fw-normal text-dark-50 mb-4">MEMORY KINGS PERU S.A.C.
+
+                                Es una empresa peruana que comenzó sus operaciones el 7 julio del 2003 exclusivamente dedicada a la comercialización de Equipos de
+                                tecnología de vanguardia de la más alta Gama, las mejores marcas de prestigio mundial, en el rubro de Computadoras, Laptops, Tablet,
+
+                                Partes, Piezas, Componentes, Accesorios y Suministros para clientes finales y distribuidores; marcando así la tendencia tecnológica en
+                                nuestro País.
+
+                                Desde sus inicios la orientación de la empresa ha sido netamente técnica, es así que se le ha dado la debida importancia a su servicio Pre-
+                                Venta y post-Venta con personal capacitado.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://www.memorykings.pe/files_noticias/listado/memorykings-listado.png" alt="..." /></div>-->
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center" style="margin-top: 60px"><img class="img-fluid rounded-3 my-5" src="https://www.memorykings.pe/files_noticias/listado/memorykings-listado.png" alt="..." /></div>
+                </div>
+            </div>
+        </header>
+        <!-- Features section-->
+        <section class="py-5" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Productos para todos tus necesidades</h2></div>
+                    <div class="col-lg-8">
+                        <div class="row gx-5 row-cols-1 row-cols-md-2">
+                            <div class="col mb-5 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"> <i class="fa-solid fa-memory"> Memorias Ram</i></div>
+                                <h2 class="h5"><img class="img-fluid" src="https://s1.eestatic.com/2018/06/07/actualidad/actualidad_313234074_130230321_1024x576.jpg" style="width: 300px;" alt="alt"/></h2>
+                                <p class="mb-0">La RAM es una memoria volátil para almacenar datos y programas temporalmente. Su cantidad y velocidad afectan el rendimiento y la multitarea, permitiendo ejecutar varios programas al mismo tiempo.</p>
+                            </div>
+                            <div class="col mb-5 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"> <i class="fa-solid fa-microchip"> Procesadores</i></div>
+                                <h2 class="h5"><img class="img-fluid" src="https://hardzone.es/app/uploads-hardzone.es/2019/12/Procesadores-Intel-y-AMD.jpg" style="width: 300px;" alt="alt"/></h2>
+                                <p class="mb-0">Los procesadores son chips electrónicos que ejecutan instrucciones en un ordenador. Su velocidad se mide en GHz e influye en la velocidad del sistema. Los procesadores modernos tienen múltiples núcleos para ejecutar múltiples tareas simultáneamente.</p></div>
+                            <div class="col mb-5 mb-md-0 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"> <i class="fa-solid fa-mobile"> Moviles</i></div>
+                                <h2 class="h5"><img class="img-fluid" src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/01/24/16745257637758.png" width="300px;" alt="alt"/></h2>
+                                <p class="mb-0">Los celulares son dispositivos portátiles de comunicación que permiten hacer llamadas y enviar mensajes de texto. También pueden conectarse a Internet y ejecutar aplicaciones móviles. Su diseño compacto y batería recargable los hacen convenientes para su uso en movimiento.</p>
+                            </div>
+                            <div class="col h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"> <i class="fa-solid fa-tarp-droplet"> Tarjetas Graficas</i></div>
+                                <h2 class="h5"><img class="img-fluid" src="https://virtualbusinesscusco.com/wp-content/uploads/2022/11/1000-630x630.png" width="250px;" alt="alt"></h2>
+                                <p class="mb-0">Las tarjetas gráficas son componentes de hardware que procesan y muestran imágenes en una pantalla. Su velocidad y capacidad de memoria afectan el rendimiento en juegos y aplicaciones de diseño. Las tarjetas gráficas modernas pueden incluir características como trazado de rayos y aceleración de inteligencia artificial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial section-->
+        <div class="py-5 bg-light">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-10 col-xl-7">
+                        <div class="text-center">
+                            <div class="fs-4 mb-4 fst-italic">"A todos nuestros clientes a lo largo y ancho de nuestro hermoso Peru, queremos enviarle nuestros mejores deseos de prosperidad, salud y amor"</div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img class="rounded-circle me-3 img-fluid" width="40px" height="40px" src="https://yt3.googleusercontent.com/ytc/AL5GRJVLcbdk_BqlwK6jL5_fUZENIAitDTesDKFxE3FVew=s900-c-k-c0x00ffffff-no-rj" alt="..." />
+                                <div class="fw-bold">
+                                    Memory Kings
+                                    <span class="fw-bold text-primary mx-1">/</span>
+                                    2023
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog preview section-->
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="text-center">
+                            <h2 class="fw-bolder">Trabajamos con diferentes marcas</h2></div>
+                    </div>
+                </div>
+                </br>
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top img-fluid" src="https://pbs.twimg.com/profile_images/1145524454170062848/U4lxVYEw_400x400.png" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">NVIDIA</h5></a>
+                                <p class="card-text mb-0">es una empresa de software y fabless que diseña unidades de procesamiento de gráficos (GPU), interfaz de programación de aplicaciones (API) para ciencia de datos y computación de alto rendimiento, así como unidades de sistema en chip (SoC) para la computación móvil y el mercado automotriz.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3 img-fluid" width="40px" height="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1920px-Nvidia_logo.svg.png" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">NVIDIA STUDIOS</div>
+                                            <div class="text-muted">Marzo 12, 2022 &middot</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top img-fluid" src="data:image/jpeg;base64,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" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">ASUS</h5></a>
+                                <p class="card-text mb-0"> conocida simplemente como ASUS pronunciado habitualmente con fonética inglesa, es una corporación multinacional de hardware, electrónica y robótica2​ con sede en Taipéi, Taiwán, en el Distrito de Beitou.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3 img-fluid" width="40px" height="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/1920px-ASUS_Logo.svg.png" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">ASUSTeK Computer, Inc.</div>
+                                            <div class="text-muted">Mazo 23, 2022 &middot</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top img-fluid" src="data:image/png;base64,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" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">ACER</h5></a>
+                                <p class="card-text mb-0">es una empresa taiwanesa fabricante de computadoras y productos informáticos con sede en Hsichih, ciudad de Nueva Taipéi.1​ Es la quinta de los seis mayores fabricantes de computadoras a nivel mundial y la mayor empresa de venta al por menor de computadoras en Taiwán.</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle me-3 img-fluid" width="40px" height="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Acer_2011.svg/1920px-Acer_2011.svg.png" alt="..." />
+                                        <div class="small">
+                                            <div class="fw-bold">Acer, Inc.</div>
+                                            <div class="text-muted">Abril 2, 2022 &middot</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Call to action-->
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    </body>
+    </html>
+
+    <footer th:insert="template.html :: footer"></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c54effc087.js" crossorigin="anonymous"></script>
+</body>
+</html>

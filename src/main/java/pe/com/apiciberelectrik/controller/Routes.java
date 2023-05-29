@@ -17,7 +17,7 @@ import pe.com.apiciberelectrik.repository.gestion.*;
 import pe.com.apiciberelectrik.seguridad.SeguridadConfig;
 import pe.com.apiciberelectrik.service.gestion.*;
 import pe.com.apiciberelectrik.service.impl.gestion.ProductoProveedorServiceImpl;
-
+// Prueba Commit
 @Controller
 public class Routes {
 
